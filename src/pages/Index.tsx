@@ -1,11 +1,10 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#F1F0FB] text-gray-900">
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80 border-b border-gray-200">
         <div className="container mx-auto py-4 px-6 flex justify-between items-center">
@@ -22,8 +21,8 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f0f0f0,_transparent)]"></div>
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 bg-[#F1F0FB]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#ffffff,_#F1F0FB)]"></div>
         
         <div className="container mx-auto px-6 relative">
           <motion.div 
@@ -95,7 +94,7 @@ const Index = () => {
       </section>
       
       {/* Brand Credentials */}
-      <section className="py-24 bg-gradient-to-b from-transparent to-gray-50">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0 }}
@@ -105,17 +104,17 @@ const Index = () => {
           >
             <p className="text-gray-500 mb-12 text-sm tracking-widest uppercase">Trusted By Leading Brands</p>
             <div className="flex flex-wrap justify-center gap-16 opacity-40">
-              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
-              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
-              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
-              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-200 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-200 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-200 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-200 rounded-sm"></div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Footer Brand Mark */}
-      <footer className="py-8 border-t border-gray-100">
+      <footer className="py-8 border-t border-gray-100 bg-[#F1F0FB]">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
