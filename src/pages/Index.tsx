@@ -59,7 +59,7 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section - Updated with crisper, multi-line text */}
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f0f0f0,_transparent)]"></div>
         
@@ -68,44 +68,64 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2 }}
-            className="max-w-3xl mx-auto"
+            className="max-w-xl mx-auto"
           >
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center justify-center mb-12 gap-2"
+              className="flex items-center justify-center mb-10 gap-2"
             >
               <span className="h-[1px] w-12 bg-gray-300"></span>
               <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Luxury Brand Agency</span>
               <span className="h-[1px] w-12 bg-gray-300"></span>
             </motion.div>
 
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
-            >
-              Your Brand Deserves More Than Engagement—It Deserves{" "}
-              <span className="relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-                  Cult
+            <div className="text-center space-y-1 mb-8">
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="font-playfair text-3xl md:text-4xl font-medium leading-tight"
+              >
+                Your Brand Deserves
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="font-playfair text-3xl md:text-4xl font-medium leading-tight"
+              >
+                More Than Engagement
+              </motion.p>
+              
+              <motion.p 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="font-playfair text-3xl md:text-4xl font-bold leading-tight"
+              >
+                It Deserves{" "}
+                <span className="relative inline-block">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
+                    Cult
+                  </span>
+                  <motion.span 
+                    className="absolute -bottom-1 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1, delay: 1 }}
+                  />
                 </span>
-                <motion.span 
-                  className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 1 }}
-                />
-              </span>
-            </motion.h2>
+              </motion.p>
+            </div>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-gray-600 md:text-lg text-center mb-16 max-w-2xl mx-auto leading-relaxed"
+              className="text-gray-600 text-base text-center mb-12 max-w-md mx-auto leading-relaxed"
             >
               We transform exceptional brands into cultural phenomena through strategic design and timeless storytelling that resonates beyond trends.
             </motion.p>
