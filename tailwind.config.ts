@@ -19,6 +19,7 @@ export default {
 		},
 		fontFamily: {
 			'playfair': ['Playfair Display', 'serif'],
+			'poppins': ['Poppins', 'sans-serif'],
 			'sans': ['Inter', 'sans-serif'],
 		},
 		extend: {

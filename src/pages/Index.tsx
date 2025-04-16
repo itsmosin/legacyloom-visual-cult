@@ -1,4 +1,3 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { Sparkles, PhoneCall, BookOpen, ArrowRight } from "lucide-react"
@@ -7,17 +6,19 @@ import { TypeAnimation } from 'react-type-animation';
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#E5DEFF] to-white">
-      {/* Simplified Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80">
-        <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-          <h1 className="font-playfair text-2xl font-bold tracking-tight text-[#6E59A5]">LegacyLoom</h1>
-          <ButtonGradient variant="outline" size="sm" className="rounded-full px-8">
-            Book a Call
-          </ButtonGradient>
+      {/* Refined Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-10">
+        <div className="container mx-auto py-4 px-6">
+          <div className="bg-white/70 backdrop-blur-md rounded-full px-6 py-3 flex justify-between items-center shadow-sm">
+            <h1 className="font-playfair text-2xl font-bold tracking-tight text-[#6E59A5]">LegacyLoom</h1>
+            <ButtonGradient variant="outline" size="sm" className="rounded-full px-8">
+              Book a Call
+            </ButtonGradient>
+          </div>
         </div>
       </nav>
 
-      {/* Hero Section */}
+      {/* Hero Section with Updated Typography */}
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#D6BCFA,_transparent)]"></div>
         
@@ -34,13 +35,13 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
-              Your Brand Deserves{" "}
+              Transforming Brands into{" "}
               <div className="h-[80px] md:h-[100px] lg:h-[120px]">
                 <TypeAnimation
                   sequence={[
-                    'More Than Engagement',
+                    'Cultural Icons',
                     2000,
-                    'A Cult Following',
+                    'Timeless Stories',
                     3000,
                   ]}
                   wrapper="span"
@@ -66,7 +67,7 @@ const Index = () => {
         </motion.div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Call to Action Section with Poppins Font */}
       <section className="py-16 relative z-10">
         <div className="container mx-auto px-6">
           <motion.div 
@@ -75,8 +76,8 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-center mb-12"
           >
-            <p className="text-[#6E59A5] text-lg md:text-2xl mb-12 font-playfair italic">
-              Craft your brand's legacy with storytelling that resonates
+            <p className="font-poppins text-[#6E59A5] text-lg md:text-2xl mb-12 italic">
+              Where storytelling meets strategy, and brands become legends
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <ButtonGradient 
