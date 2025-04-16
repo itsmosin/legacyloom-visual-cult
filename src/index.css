@@ -14,16 +14,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 267 75% 31%;
+    --primary: 222.2 47.4% 11.2%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 267 40% 96.1%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 267 40% 96.1%;
+    --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 267 40% 96.1%;
+    --accent: 210 40% 96.1%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 267 75% 31%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
 
@@ -98,12 +98,10 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair;
-    letter-spacing: -0.02em;
   }
   
   html {
@@ -125,13 +123,4 @@
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
-}
-
-/* Typewriter effect custom styles */
-.Typewriter {
-  display: inline-block;
-}
-
-.Typewriter__cursor {
-  color: theme('colors.purple.600');
 }
