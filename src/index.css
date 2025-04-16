@@ -102,11 +102,14 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[#F2FCE2] to-white text-gray-900;
+    @apply bg-[#F3EFFF];
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-playfair tracking-tight;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   html {
@@ -117,21 +120,21 @@
 /* Blob animation */
 @keyframes blob {
   0% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
   }
   33% {
-    transform: translate(30px, -50px) scale(1.1);
+    transform: translate(30px, -50px) scale(1.1) rotate(120deg);
   }
   66% {
-    transform: translate(-20px, 20px) scale(0.9);
+    transform: translate(-20px, 20px) scale(0.9) rotate(240deg);
   }
   100% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0px, 0px) scale(1) rotate(360deg);
   }
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 20s infinite;
 }
 
 .animation-delay-2000 {
@@ -156,4 +159,17 @@
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Neomorphism effects */
+.neo-shadow {
+  box-shadow: 
+    8px 8px 16px rgba(174, 174, 192, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.6);
+}
+
+.neo-pressed {
+  box-shadow: 
+    inset 8px 8px 16px rgba(174, 174, 192, 0.4),
+    inset -8px -8px 16px rgba(255, 255, 255, 0.6);
 }
