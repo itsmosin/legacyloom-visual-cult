@@ -6,15 +6,53 @@ import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
 const Index = () => {
   return (
     <div className="min-h-screen">
-      {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80 border-b border-gray-200">
-        <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-          <h1 className="font-playfair text-2xl font-bold tracking-tight">LegacyLoom</h1>
+      {/* Navigation - Updated for better aesthetics */}
+      <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80 border-b border-gray-100 shadow-sm">
+        <div className="container mx-auto py-5 px-6 flex justify-between items-center">
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="flex items-center gap-3"
+          >
+            <span className="w-8 h-8 flex items-center justify-center rounded-full bg-gradient-to-r from-gray-900 to-gray-700">
+              <Sparkles className="h-4 w-4 text-white" />
+            </span>
+            <h1 className="font-playfair text-2xl font-bold tracking-tight text-gray-900">LegacyLoom</h1>
+          </motion.div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-gray-700 hover:text-black transition-colors">About</a>
-            <a href="#services" className="text-gray-700 hover:text-black transition-colors">Services</a>
-            <a href="#work" className="text-gray-700 hover:text-black transition-colors">Work</a>
-            <ButtonGradient variant="outline" size="sm">
+            <motion.a 
+              href="#about" 
+              className="text-gray-700 hover:text-black transition-colors relative group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <span>About</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
+            </motion.a>
+            <motion.a 
+              href="#services" 
+              className="text-gray-700 hover:text-black transition-colors relative group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <span>Services</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
+            </motion.a>
+            <motion.a 
+              href="#work" 
+              className="text-gray-700 hover:text-black transition-colors relative group"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            >
+              <span>Work</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
+            </motion.a>
+            <ButtonGradient 
+              variant="outline" 
+              size="sm"
+              className="ml-2"
+            >
               Contact
             </ButtonGradient>
           </div>
