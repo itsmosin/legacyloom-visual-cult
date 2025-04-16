@@ -1,7 +1,6 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
-import { Sparkles } from "lucide-react"
+import { Sparkles, PhoneCall, BookOpen, ArrowRight } from "lucide-react"
 import { TypeAnimation } from 'react-type-animation';
 
 const Index = () => {
@@ -64,6 +63,65 @@ const Index = () => {
           <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-green-100 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-2000"></div>
           <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-green-50 rounded-full mix-blend-multiply filter blur-xl animate-blob animation-delay-4000"></div>
         </motion.div>
+      </section>
+
+      {/* Call to Action Section */}
+      <section className="py-16 relative z-10">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-center mb-12"
+          >
+            <p className="text-gray-600 text-lg md:text-xl mb-8">
+              Craft your brand's legacy with storytelling that resonates
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <ButtonGradient 
+                className="group flex items-center gap-2 rounded-full px-8"
+              >
+                <PhoneCall className="w-4 h-4" />
+                Book a Call
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </ButtonGradient>
+              
+              <ButtonGradient 
+                variant="outline"
+                className="group flex items-center gap-2 rounded-full px-8"
+              >
+                <BookOpen className="w-4 h-4" />
+                Explore Services
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </ButtonGradient>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Brands Section */}
+      <section className="py-16 bg-white/50 backdrop-blur-sm">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="text-center"
+          >
+            <h3 className="text-2xl font-playfair font-medium mb-12">Trusted by Forward-Thinking Brands</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+              {[...Array(4)].map((_, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 0.7 }}
+                  transition={{ duration: 0.5, delay: 0.2 * index }}
+                  className="w-32 h-12 rounded-md bg-gradient-to-r from-gray-200 to-gray-100"
+                />
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Footer Brand Mark */}
