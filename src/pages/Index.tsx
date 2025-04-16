@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
-import Typed from 'react-typed';
+import Typed from 'react-typed'; // Import Typed as default since that's how it's exported
 
 const Index = () => {
   return (
