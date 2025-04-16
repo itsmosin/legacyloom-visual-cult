@@ -1,8 +1,7 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronRight, Sparkles, Instagram, Linkedin, Twitter } from "lucide-react"
-import Typed from 'react-typed'
+import { Typed } from 'react-typed'
 
 const Index = () => {
   return (
