@@ -1,7 +1,7 @@
 
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
-import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
+import { ArrowRight, ChevronRight, Sparkles, Instagram, Linkedin, Twitter } from "lucide-react"
 
 const Index = () => {
   return (
@@ -39,7 +39,7 @@ const Index = () => {
               className="flex items-center justify-center mb-12 gap-2"
             >
               <span className="h-[1px] w-12 bg-gray-300"></span>
-              <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Crafting Timeless Luxury</span>
+              <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Brand Strategy Agency</span>
               <span className="h-[1px] w-12 bg-gray-300"></span>
             </motion.div>
 
@@ -49,9 +49,10 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
-              Elevating Brands Beyond <span className="relative">
+              Your Brand Deserves More Than Engagement—It Deserves{" "}
+              <span className="relative">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-                  Ordinary
+                  Legacy
                 </span>
                 <motion.span 
                   className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
@@ -113,18 +114,55 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer Brand Mark */}
-      <footer className="py-8 border-t border-gray-100">
+      {/* Enhanced Footer */}
+      <footer className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="space-y-6">
+              <h3 className="font-playfair text-xl font-bold">LegacyLoom</h3>
+              <p className="text-gray-600 max-w-xs">Creating lasting brand impressions that transform businesses into cultural icons.</p>
+              <div className="flex gap-4">
+                <a href="#" className="h-10 w-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center text-gray-600 hover:text-gray-900">
+                  <Instagram className="h-5 w-5" />
+                </a>
+                <a href="#" className="h-10 w-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center text-gray-600 hover:text-gray-900">
+                  <Linkedin className="h-5 w-5" />
+                </a>
+                <a href="#" className="h-10 w-10 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center text-gray-600 hover:text-gray-900">
+                  <Twitter className="h-5 w-5" />
+                </a>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-sm uppercase tracking-wider text-gray-500 mb-6">Services</h4>
+              <ul className="space-y-4">
+                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Brand Strategy</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Visual Identity</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Digital Experience</a></li>
+                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Content Creation</a></li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-bold text-sm uppercase tracking-wider text-gray-500 mb-6">Contact</h4>
+              <ul className="space-y-4">
+                <li className="text-gray-600">hello@legacyloom.com</li>
+                <li className="text-gray-600">+1 (555) 123-4567</li>
+                <li className="text-gray-600">123 Legacy Lane, New York, NY 10001</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="mt-16 pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-gray-400" />
-              <span className="text-gray-500 text-sm">Crafting Legacy Since 2024</span>
+              <span className="text-gray-500 text-sm">© 2025 LegacyLoom. All rights reserved.</span>
             </div>
             <div className="flex gap-8 text-gray-500">
-              <a href="#" className="text-sm hover:text-black transition-colors">Instagram</a>
-              <a href="#" className="text-sm hover:text-black transition-colors">LinkedIn</a>
-              <a href="#" className="text-sm hover:text-black transition-colors">Twitter</a>
+              <a href="#" className="text-sm hover:text-black transition-colors">Privacy</a>
+              <a href="#" className="text-sm hover:text-black transition-colors">Terms</a>
+              <a href="#" className="text-sm hover:text-black transition-colors">Cookies</a>
             </div>
           </div>
         </div>
