@@ -108,7 +108,8 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-playfair tracking-tight;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   html {
@@ -158,4 +159,17 @@
 
 .animate-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Neomorphism effects */
+.neo-shadow {
+  box-shadow: 
+    8px 8px 16px rgba(174, 174, 192, 0.4),
+    -8px -8px 16px rgba(255, 255, 255, 0.6);
+}
+
+.neo-pressed {
+  box-shadow: 
+    inset 8px 8px 16px rgba(174, 174, 192, 0.4),
+    inset -8px -8px 16px rgba(255, 255, 255, 0.6);
 }

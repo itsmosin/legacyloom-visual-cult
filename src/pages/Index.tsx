@@ -46,7 +46,7 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section with Updated Typography */}
+      {/* Hero Section with Neomorphism Heading */}
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#D6BCFA,_transparent)]"></div>
         
@@ -57,28 +57,30 @@ const Index = () => {
             transition={{ duration: 1.2 }}
             className="max-w-3xl mx-auto"
           >
-            <motion.h2 
+            <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
+              className="relative p-8 rounded-2xl bg-white/40 backdrop-blur-sm shadow-[inset_0px_0px_20px_rgba(255,255,255,0.5)] border border-white/20"
             >
-              Transforming Brands into{" "}
-              <div className="h-[80px] md:h-[100px] lg:h-[120px]">
-                <TypeAnimation
-                  sequence={[
-                    'Cultural Icons',
-                    2000,
-                    'Timeless Stories',
-                    3000,
-                  ]}
-                  wrapper="span"
-                  speed={50}
-                  repeat={Infinity}
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-[#9b87f5] to-[#7E69AB]"
-                />
-              </div>
-            </motion.h2>
+              <h2 className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8 bg-gradient-to-br from-[#6E59A5] to-[#9b87f5] bg-clip-text text-transparent drop-shadow-sm">
+                Transforming Brands into{" "}
+                <div className="h-[80px] md:h-[100px] lg:h-[120px] mt-4">
+                  <TypeAnimation
+                    sequence={[
+                      'Cultural Icons',
+                      2000,
+                      'Timeless Stories',
+                      3000,
+                    ]}
+                    wrapper="span"
+                    speed={50}
+                    repeat={Infinity}
+                    className="bg-gradient-to-r from-[#9b87f5] to-[#7E69AB] bg-clip-text text-transparent drop-shadow-sm"
+                  />
+                </div>
+              </h2>
+            </motion.div>
           </motion.div>
         </div>
 
