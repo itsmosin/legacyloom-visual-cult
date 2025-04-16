@@ -1,16 +1,35 @@
 import { ButtonGradient } from "@/components/ui/button-gradient"
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight, ChevronRight, Globe, Layers, MessageSquare, Rocket, Sparkles } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import BrandLogos from "@/components/BrandLogos"
+import { useEffect, useState } from "react"
 
 const Index = () => {
+  const [scrolled, setScrolled] = useState(false)
+  const { scrollY } = useScroll()
+
+  useEffect(() => {
+    const updateScrolled = () => {
+      setScrolled(window.scrollY > 50)
+    }
+    
+    window.addEventListener('scroll', updateScrolled)
+    return () => window.removeEventListener('scroll', updateScrolled)
+  }, [])
+
   return (
     <div className="min-h-screen">
-      {/* Navigation - Updated for better aesthetics */}
-      <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80 border-b border-gray-100 shadow-sm">
-        <div className="container mx-auto py-5 px-6 flex justify-between items-center">
+      {/* Minimal Navigation with scroll behavior */}
+      <motion.nav 
+        className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${
+          scrolled 
+            ? 'backdrop-blur-md bg-white/90 border-b border-gray-100 shadow-sm py-4' 
+            : 'bg-transparent py-5'
+        }`}
+      >
+        <div className="container mx-auto px-6 flex justify-between items-center">
           <motion.div 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -22,44 +41,24 @@ const Index = () => {
             </span>
             <h1 className="font-playfair text-2xl font-bold tracking-tight text-gray-900">LegacyLoom</h1>
           </motion.div>
-          <div className="hidden md:flex items-center gap-8">
-            <motion.a 
-              href="#about" 
-              className="text-gray-700 hover:text-black transition-colors relative group"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <span>About</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-            </motion.a>
-            <motion.a 
-              href="#services" 
-              className="text-gray-700 hover:text-black transition-colors relative group"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <span>Services</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-            </motion.a>
-            <motion.a 
-              href="#work" 
-              className="text-gray-700 hover:text-black transition-colors relative group"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <span>Work</span>
-              <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-black transition-all group-hover:w-full"></span>
-            </motion.a>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <ButtonGradient 
               variant="outline" 
               size="sm"
-              className="ml-2"
+              className={`transition-all duration-300 ${
+                scrolled ? 'border-gray-300' : 'border-gray-200'
+              }`}
             >
               Contact
             </ButtonGradient>
-          </div>
+          </motion.div>
         </div>
-      </nav>
+      </motion.nav>
 
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-32 pb-24 md:pt-24 md:pb-16">
