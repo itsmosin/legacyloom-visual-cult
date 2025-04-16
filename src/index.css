@@ -102,7 +102,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[#E5DEFF] to-white text-gray-900;
+    @apply bg-[#F3EFFF];
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -119,21 +119,21 @@
 /* Blob animation */
 @keyframes blob {
   0% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0px, 0px) scale(1) rotate(0deg);
   }
   33% {
-    transform: translate(30px, -50px) scale(1.1);
+    transform: translate(30px, -50px) scale(1.1) rotate(120deg);
   }
   66% {
-    transform: translate(-20px, 20px) scale(0.9);
+    transform: translate(-20px, 20px) scale(0.9) rotate(240deg);
   }
   100% {
-    transform: translate(0px, 0px) scale(1);
+    transform: translate(0px, 0px) scale(1) rotate(360deg);
   }
 }
 
 .animate-blob {
-  animation: blob 7s infinite;
+  animation: blob 20s infinite;
 }
 
 .animation-delay-2000 {

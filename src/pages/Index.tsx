@@ -5,7 +5,35 @@ import { TypeAnimation } from 'react-type-animation';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#E5DEFF] to-white">
+    <div className="min-h-screen bg-gradient-to-br from-[#F3EFFF] via-[#E9E3FF] to-white relative overflow-hidden">
+      {/* Animated background shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            rotate: [0, 90, 180, 270, 360],
+          }}
+          transition={{
+            duration: 20,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+          className="absolute top-1/4 -left-10 w-72 h-72 bg-[#DED3FF]/30 rounded-full blur-3xl"
+        />
+        <motion.div
+          animate={{
+            scale: [1.2, 1, 1.2],
+            rotate: [360, 270, 180, 90, 0],
+          }}
+          transition={{
+            duration: 25,
+            ease: "linear",
+            repeat: Infinity,
+          }}
+          className="absolute bottom-1/4 -right-10 w-96 h-96 bg-[#E5DEFF]/40 rounded-full blur-3xl"
+        />
+      </div>
+
       {/* Refined Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-10">
         <div className="container mx-auto py-4 px-6">
