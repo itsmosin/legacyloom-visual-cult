@@ -2,6 +2,7 @@
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronRight, Sparkles, Instagram, Linkedin, Twitter } from "lucide-react"
+import Typed from 'react-typed'
 
 const Index = () => {
   return (
@@ -11,10 +12,10 @@ const Index = () => {
         <div className="container mx-auto py-4 px-6 flex justify-between items-center">
           <h1 className="font-playfair text-2xl font-bold tracking-tight">LegacyLoom</h1>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#about" className="text-gray-700 hover:text-black transition-colors">About</a>
-            <a href="#services" className="text-gray-700 hover:text-black transition-colors">Services</a>
-            <a href="#work" className="text-gray-700 hover:text-black transition-colors">Work</a>
-            <ButtonGradient variant="outline" size="sm">
+            <a href="#about" className="text-gray-700 hover:text-black transition-colors font-medium">About</a>
+            <a href="#services" className="text-gray-700 hover:text-black transition-colors font-medium">Services</a>
+            <a href="#work" className="text-gray-700 hover:text-black transition-colors font-medium">Work</a>
+            <ButtonGradient variant="outline" size="sm" className="font-medium">
               Contact
             </ButtonGradient>
           </div>
@@ -49,18 +50,17 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
-              Your Brand Deserves More Than Engagement—It Deserves{" "}
-              <span className="relative">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-                  Legacy
-                </span>
-                <motion.span 
-                  className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: 1 }}
-                  transition={{ duration: 1, delay: 1 }}
+              Your Brand Deserves{" "}
+              <div className="inline-block">
+                <Typed
+                  strings={['More Than Engagement', 'Legacy']}
+                  typeSpeed={70}
+                  backSpeed={50}
+                  backDelay={1000}
+                  loop={true}
+                  className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600"
                 />
-              </span>
+              </div>
             </motion.h2>
             
             <motion.p 
@@ -114,10 +114,10 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Footer */}
+      {/* Enhanced Footer - Removed Services section */}
       <footer className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <h3 className="font-playfair text-xl font-bold">LegacyLoom</h3>
               <p className="text-gray-600 max-w-xs">Creating lasting brand impressions that transform businesses into cultural icons.</p>
@@ -132,16 +132,6 @@ const Index = () => {
                   <Twitter className="h-5 w-5" />
                 </a>
               </div>
-            </div>
-            
-            <div>
-              <h4 className="font-bold text-sm uppercase tracking-wider text-gray-500 mb-6">Services</h4>
-              <ul className="space-y-4">
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Brand Strategy</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Visual Identity</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Digital Experience</a></li>
-                <li><a href="#" className="text-gray-600 hover:text-black transition-colors">Content Creation</a></li>
-              </ul>
             </div>
             
             <div>
