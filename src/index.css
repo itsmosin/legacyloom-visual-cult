@@ -102,7 +102,9 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[#F2FCE2] to-white text-gray-900;
+    @apply bg-gradient-to-br from-[#E5DEFF] to-white text-gray-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, h5, h6 {

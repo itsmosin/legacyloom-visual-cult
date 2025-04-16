@@ -10,7 +10,7 @@ const Index = () => {
       {/* Simplified Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80">
         <div className="container mx-auto py-4 px-6 flex justify-between items-center">
-          <h1 className="font-playfair text-2xl font-bold tracking-tight">LegacyLoom</h1>
+          <h1 className="font-playfair text-2xl font-bold tracking-tight text-[#6E59A5]">LegacyLoom</h1>
           <ButtonGradient variant="outline" size="sm" className="rounded-full px-8">
             Book a Call
           </ButtonGradient>
@@ -19,7 +19,7 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#E5DEFF,_transparent)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#D6BCFA,_transparent)]"></div>
         
         <div className="container mx-auto px-6 relative">
           <motion.div 
@@ -53,7 +53,7 @@ const Index = () => {
           </motion.div>
         </div>
 
-        {/* Animated Background Elements */}
+        {/* Animated Background Elements - Updated colors */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.1 }}
@@ -100,7 +100,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Brands Section */}
+      {/* Brands Section with updated styling */}
       <section className="py-16 bg-white/50 backdrop-blur-sm">
         <div className="container mx-auto px-6">
           <motion.div
@@ -137,7 +137,7 @@ const Index = () => {
         </div>
       </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
