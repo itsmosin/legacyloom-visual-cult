@@ -1,9 +1,9 @@
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
-import { Typed } from 'react-typed';
+import Typed from 'react-typed'; // Import Typed as default since that's how it's exported
 
 const Index = () => {
   return (
@@ -49,14 +49,13 @@ const Index = () => {
               className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
               Your Brand Deserves More Than{" "}
-              <span className="relative">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
                 <Typed
                   strings={['Engagement', 'Legacy']}
                   typeSpeed={100}
                   backSpeed={50}
                   backDelay={2000}
                   loop
-                  className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600"
                 />
               </span>
             </motion.h2>
