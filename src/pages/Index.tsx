@@ -1,70 +1,124 @@
 
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion } from "framer-motion"
-import { ArrowRight, Phone, Sparkles } from "lucide-react"
+import { ArrowRight, ChevronRight, Sparkles } from "lucide-react"
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-gray-50">
+    <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="container mx-auto py-6 flex justify-between items-center">
-        <h1 className="font-playfair text-2xl font-bold">LegacyLoom</h1>
-        <ButtonGradient variant="outline" size="sm">
-          Contact Us
-        </ButtonGradient>
+      <nav className="fixed top-0 left-0 right-0 z-10 backdrop-blur-md bg-white/80 border-b border-gray-200">
+        <div className="container mx-auto py-4 px-6 flex justify-between items-center">
+          <h1 className="font-playfair text-2xl font-bold tracking-tight">LegacyLoom</h1>
+          <div className="hidden md:flex items-center gap-8">
+            <a href="#about" className="text-gray-700 hover:text-black transition-colors">About</a>
+            <a href="#services" className="text-gray-700 hover:text-black transition-colors">Services</a>
+            <a href="#work" className="text-gray-700 hover:text-black transition-colors">Work</a>
+            <ButtonGradient variant="outline" size="sm">
+              Contact
+            </ButtonGradient>
+          </div>
+        </div>
       </nav>
 
       {/* Hero Section */}
-      <main className="container mx-auto pt-20 pb-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="font-playfair text-5xl md:text-7xl font-bold leading-tight mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent"
-          >
-            Your Brand Deserves More Than Engagement—It Deserves Cult
-          </motion.h2>
-          
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-gray-600 text-lg md:text-xl mb-12 max-w-2xl mx-auto"
-          >
-            We transform exceptional brands into cultural phenomena through strategic design and timeless storytelling.
-          </motion.p>
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f0f0f0,_transparent)]"></div>
+        
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-3xl mx-auto">
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="flex items-center justify-center mb-8 gap-2"
+            >
+              <span className="h-px w-8 bg-gray-400"></span>
+              <span className="text-gray-500 font-medium tracking-wider text-sm uppercase">Luxury Brand Agency</span>
+              <span className="h-px w-8 bg-gray-400"></span>
+            </motion.div>
 
+            <motion.h2 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-6"
+            >
+              Your Brand Deserves More Than Engagement—It Deserves <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Cult</span>
+            </motion.h2>
+            
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-gray-600 md:text-lg text-center mb-16 max-w-2xl mx-auto"
+            >
+              We transform exceptional brands into cultural phenomena through strategic design and timeless storytelling that resonates beyond trends.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            >
+              <ButtonGradient size="lg" className="w-full sm:w-auto">
+                Book a Strategy Call
+                <ChevronRight className="h-4 w-4" />
+              </ButtonGradient>
+              <a 
+                href="#services" 
+                className="group flex items-center gap-2 px-6 py-3 transition-colors"
+              >
+                <span>Explore Services</span>
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Visual Divider */}
+      <div className="container mx-auto px-6">
+        <div className="border-t border-gray-200 w-full max-w-4xl mx-auto"></div>
+      </div>
+      
+      {/* Brand Credentials */}
+      <section className="py-16">
+        <div className="container mx-auto px-6">
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-center"
           >
-            <ButtonGradient size="lg" className="group">
-              Book a Strategy Call
-              <Phone className="ml-2 h-4 w-4 transition-transform group-hover:scale-110" />
-            </ButtonGradient>
-            <ButtonGradient variant="outline" size="lg" className="group">
-              Explore Services
-              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </ButtonGradient>
+            <p className="text-gray-500 mb-8 text-sm tracking-widest uppercase">Trusted By Leading Brands</p>
+            <div className="flex flex-wrap justify-center gap-12 opacity-40">
+              <div className="w-24 h-10 bg-gray-900"></div>
+              <div className="w-24 h-10 bg-gray-900"></div>
+              <div className="w-24 h-10 bg-gray-900"></div>
+              <div className="w-24 h-10 bg-gray-900"></div>
+            </div>
           </motion.div>
         </div>
-      </main>
+      </section>
 
       {/* Footer Brand Mark */}
-      <div className="fixed bottom-8 left-1/2 -translate-x-1/2">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex items-center gap-2 text-gray-400 text-sm"
-        >
-          <Sparkles className="h-4 w-4" />
-          <span>Crafting Legacy Since 2024</span>
-        </motion.div>
-      </div>
+      <footer className="py-6 border-t border-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <div className="flex items-center gap-2">
+              <Sparkles className="h-4 w-4 text-gray-400" />
+              <span className="text-gray-500 text-sm">Crafting Legacy Since 2024</span>
+            </div>
+            <div className="flex gap-6 text-gray-500">
+              <a href="#" className="text-sm hover:text-black transition-colors">Instagram</a>
+              <a href="#" className="text-sm hover:text-black transition-colors">LinkedIn</a>
+              <a href="#" className="text-sm hover:text-black transition-colors">Twitter</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   )
 }
