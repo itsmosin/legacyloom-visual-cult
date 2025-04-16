@@ -26,32 +26,48 @@ const Index = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f0f0f0,_transparent)]"></div>
         
         <div className="container mx-auto px-6 relative">
-          <div className="max-w-3xl mx-auto">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2 }}
+            className="max-w-3xl mx-auto"
+          >
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="flex items-center justify-center mb-8 gap-2"
+              className="flex items-center justify-center mb-12 gap-2"
             >
-              <span className="h-px w-8 bg-gray-400"></span>
-              <span className="text-gray-500 font-medium tracking-wider text-sm uppercase">Luxury Brand Agency</span>
-              <span className="h-px w-8 bg-gray-400"></span>
+              <span className="h-[1px] w-12 bg-gray-300"></span>
+              <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Luxury Brand Agency</span>
+              <span className="h-[1px] w-12 bg-gray-300"></span>
             </motion.div>
 
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-6"
+              className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
-              Your Brand Deserves More Than Engagement—It Deserves <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">Cult</span>
+              Your Brand Deserves More Than Engagement—It Deserves{" "}
+              <span className="relative">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
+                  Cult
+                </span>
+                <motion.span 
+                  className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
+                  initial={{ scaleX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1, delay: 1 }}
+                />
+              </span>
             </motion.h2>
             
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-gray-600 md:text-lg text-center mb-16 max-w-2xl mx-auto"
+              className="text-gray-600 md:text-lg text-center mb-16 max-w-2xl mx-auto leading-relaxed"
             >
               We transform exceptional brands into cultural phenomena through strategic design and timeless storytelling that resonates beyond trends.
             </motion.p>
@@ -60,31 +76,26 @@ const Index = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
-              <ButtonGradient size="lg" className="w-full sm:w-auto">
+              <ButtonGradient size="lg" className="w-full sm:w-auto group">
                 Book a Strategy Call
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </ButtonGradient>
               <a 
                 href="#services" 
-                className="group flex items-center gap-2 px-6 py-3 transition-colors"
+                className="group flex items-center gap-2 px-6 py-3 transition-all hover:text-gray-900"
               >
                 <span>Explore Services</span>
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-2" />
               </a>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
       
-      {/* Visual Divider */}
-      <div className="container mx-auto px-6">
-        <div className="border-t border-gray-200 w-full max-w-4xl mx-auto"></div>
-      </div>
-      
       {/* Brand Credentials */}
-      <section className="py-16">
+      <section className="py-24 bg-gradient-to-b from-transparent to-gray-50">
         <div className="container mx-auto px-6">
           <motion.div 
             initial={{ opacity: 0 }}
@@ -92,26 +103,26 @@ const Index = () => {
             transition={{ duration: 1, delay: 0.8 }}
             className="text-center"
           >
-            <p className="text-gray-500 mb-8 text-sm tracking-widest uppercase">Trusted By Leading Brands</p>
-            <div className="flex flex-wrap justify-center gap-12 opacity-40">
-              <div className="w-24 h-10 bg-gray-900"></div>
-              <div className="w-24 h-10 bg-gray-900"></div>
-              <div className="w-24 h-10 bg-gray-900"></div>
-              <div className="w-24 h-10 bg-gray-900"></div>
+            <p className="text-gray-500 mb-12 text-sm tracking-widest uppercase">Trusted By Leading Brands</p>
+            <div className="flex flex-wrap justify-center gap-16 opacity-40">
+              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
+              <div className="w-24 h-10 bg-gray-900 rounded-sm"></div>
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Footer Brand Mark */}
-      <footer className="py-6 border-t border-gray-100">
+      <footer className="py-8 border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <Sparkles className="h-4 w-4 text-gray-400" />
               <span className="text-gray-500 text-sm">Crafting Legacy Since 2024</span>
             </div>
-            <div className="flex gap-6 text-gray-500">
+            <div className="flex gap-8 text-gray-500">
               <a href="#" className="text-sm hover:text-black transition-colors">Instagram</a>
               <a href="#" className="text-sm hover:text-black transition-colors">LinkedIn</a>
               <a href="#" className="text-sm hover:text-black transition-colors">Twitter</a>
