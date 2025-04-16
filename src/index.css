@@ -5,43 +5,43 @@
 
 @layer base {
   :root {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
+    --background: 260 33% 98%;
+    --foreground: 260 20% 15%;
 
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
+    --card: 260 33% 98%;
+    --card-foreground: 260 20% 15%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 260 33% 98%;
+    --popover-foreground: 260 20% 15%;
 
     --primary: 265 100% 70%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 260 30% 95%;
+    --secondary-foreground: 260 20% 15%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 260 30% 95%;
+    --muted-foreground: 260 10% 50%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 260 30% 90%;
+    --accent-foreground: 260 20% 15%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 265 100% 70%;
 
     --radius: 0.75rem;
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
+    --sidebar-background: 260 33% 98%;
+    --sidebar-foreground: 260 20% 15%;
     --sidebar-primary: 265 100% 70%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217.2 32.6% 17.5%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-accent: 260 30% 90%;
+    --sidebar-accent-foreground: 260 20% 15%;
+    --sidebar-border: 260 20% 90%;
     --sidebar-ring: 265 100% 70%;
   }
 }
@@ -52,16 +52,16 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
-    background-image: radial-gradient(rgba(155, 135, 245, 0.15) 1px, transparent 1px),
-                      radial-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px);
+    @apply bg-web3-veryLightPurple text-foreground font-cormorant;
+    background-image: radial-gradient(rgba(155, 135, 245, 0.1) 1px, transparent 1px),
+                      radial-gradient(rgba(155, 135, 245, 0.05) 1px, transparent 1px);
     background-size: 50px 50px;
     background-position: 0 0, 25px 25px;
     background-attachment: fixed;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair;
+    @apply font-marcellus;
   }
   
   html {
@@ -128,7 +128,7 @@
 
 /* Web3 specific styles */
 .glass-card {
-  @apply backdrop-blur-lg bg-white/5 border border-white/10 rounded-xl shadow-lg;
+  @apply backdrop-blur-lg bg-white/20 border border-white/30 rounded-xl shadow-lg;
 }
 
 .neo-button {
@@ -151,4 +151,28 @@
 .border-gradient {
   border-image: linear-gradient(to right, #9b87f5, #0EA5E9);
   border-image-slice: 1;
+}
+
+/* Typewriter effect container */
+.typewriter-container {
+  @apply inline-block;
+}
+
+/* Luxury elements */
+.luxury-card {
+  @apply bg-white/30 backdrop-blur-md border border-white/40 rounded-xl shadow-lg p-6;
+  box-shadow: 0 8px 32px rgba(155, 135, 245, 0.1);
+}
+
+.luxury-button {
+  @apply bg-gradient-to-r from-web3-purple to-web3-blue text-white px-8 py-3 rounded-full
+         shadow-md hover:shadow-lg transition-all duration-300
+         border border-white/20;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.luxury-heading {
+  @apply font-marcellus text-4xl md:text-6xl lg:text-7xl font-medium leading-tight;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  letter-spacing: -0.02em;
 }

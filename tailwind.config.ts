@@ -22,6 +22,8 @@ export default {
 			'playfair': ['Playfair Display', 'serif'],
 			'sans': ['Inter', 'sans-serif'],
 			'mono': ['Space Mono', 'monospace'],
+			'cormorant': ['Cormorant Garamond', 'serif'],
+			'marcellus': ['Marcellus', 'serif'],
 		},
 		extend: {
 			colors: {
@@ -60,8 +62,9 @@ export default {
 				},
 				web3: {
 					purple: "#9b87f5",
+					lightPurple: "#E5DEFF",
+					veryLightPurple: "#F3F0FF",
 					darkPurple: "#1A1F2C",
-					lightPurple: "#D6BCFA",
 					blue: "#0EA5E9",
 					charcoal: "#403E43",
 				},

@@ -9,8 +9,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-web3-purple via-web3-darkPurple to-web3-purple text-white hover:shadow-lg hover:shadow-web3-purple/20",
-        outline: "border border-gray-300 text-gray-300 hover:border-white hover:text-white hover:shadow-inner",
+        default: "bg-gradient-to-r from-web3-purple via-web3-darkPurple to-web3-purple text-white hover:shadow-lg hover:shadow-web3-purple/20 border border-white/20",
+        outline: "border border-web3-purple/50 text-web3-purple hover:bg-web3-purple/5 hover:border-web3-purple hover:shadow-inner",
       },
       size: {
         default: "h-12 px-8 py-2",
