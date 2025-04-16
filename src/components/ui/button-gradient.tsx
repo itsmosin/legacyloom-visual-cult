@@ -1,4 +1,3 @@
-
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -9,8 +8,8 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-gradient-to-r from-web3-purple via-web3-darkPurple to-web3-purple text-white hover:shadow-lg hover:shadow-web3-purple/20 border border-white/20",
-        outline: "border border-web3-purple/50 text-web3-purple hover:bg-web3-purple/5 hover:border-web3-purple hover:shadow-inner",
+        default: "bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white hover:shadow-lg hover:shadow-gray-200/40",
+        outline: "border border-gray-300 text-gray-900 hover:border-gray-900 hover:bg-gray-50",
       },
       size: {
         default: "h-12 px-8 py-2",
