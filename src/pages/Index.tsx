@@ -39,7 +39,7 @@ const Index = () => {
               className="flex items-center justify-center mb-12 gap-2"
             >
               <span className="h-[1px] w-12 bg-gray-300"></span>
-              <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Luxury Brand Agency</span>
+              <span className="text-gray-500 font-medium tracking-widest text-sm uppercase">Crafting Timeless Luxury</span>
               <span className="h-[1px] w-12 bg-gray-300"></span>
             </motion.div>
 
@@ -49,10 +49,9 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-center mb-8"
             >
-              Your Brand Deserves More Than Engagement—It Deserves{" "}
-              <span className="relative">
+              Elevating Brands Beyond <span className="relative">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-900 to-gray-600">
-                  Cult
+                  Ordinary
                 </span>
                 <motion.span 
                   className="absolute -bottom-2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-gray-400 to-transparent"
