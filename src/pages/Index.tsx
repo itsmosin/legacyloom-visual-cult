@@ -1,7 +1,6 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion, useScroll } from "framer-motion"
-import { ArrowRight, ChevronRight, MessageCircle, Sparkles } from "lucide-react"
+import { ArrowRight, ChevronRight, MessageCircle, Sparkles, Linkedin } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from "react"
 
@@ -20,7 +19,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Minimal Navigation with scroll behavior */}
       <motion.nav 
         className={`fixed top-0 left-0 right-0 z-10 transition-all duration-300 ${
           scrolled 
@@ -59,7 +57,6 @@ const Index = () => {
         </div>
       </motion.nav>
 
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center pt-32 pb-24 md:pt-24 md:pb-16">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#f0f0f0,_transparent)]"></div>
         
@@ -135,7 +132,75 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      <section className="py-24 relative overflow-hidden bg-gray-50">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_#f0f0f0,_transparent)]"></div>
+        <div className="container mx-auto px-6 relative">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-center mb-16"
+          >
+            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6">Why LegacyLoom?</h2>
+            <p className="text-gray-600 text-lg">We craft narratives that transcend traditional marketing, creating deep emotional connections that turn customers into devoted brand advocates.</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="mb-6">
+                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto" />
+              </div>
+              <p className="text-gray-700 mb-6">"LegacyLoom transformed our digital presence. Their strategic approach to storytelling helped us connect with our audience on a deeper level."</p>
+              <div>
+                <h4 className="font-semibold text-gray-900">Sarah Chen</h4>
+                <p className="text-gray-500 text-sm">Marketing Director, MTV</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="mb-6">
+                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto" />
+              </div>
+              <p className="text-gray-700 mb-6">"The brand narrative they created for us resonated perfectly with our target audience. Our engagement metrics have never been better."</p>
+              <div>
+                <h4 className="font-semibold text-gray-900">Michael Roberts</h4>
+                <p className="text-gray-500 text-sm">CEO, Userology</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow"
+            >
+              <div className="mb-6">
+                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto" />
+              </div>
+              <p className="text-gray-700 mb-6">"Working with LegacyLoom was transformative. They didn't just improve our marketing—they revolutionized how we connect with our community."</p>
+              <div>
+                <h4 className="font-semibold text-gray-900">Emma Thompson</h4>
+                <p className="text-gray-500 text-sm">Brand Director, SayF</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-32 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_#f0f0f0,_transparent)]"></div>
         <div className="container mx-auto px-6 relative">
@@ -165,7 +230,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-16 bg-gray-50 border-t border-gray-100">
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
@@ -180,6 +244,9 @@ const Index = () => {
               <div className="flex gap-4 text-gray-400">
                 <a href="https://t.me/legacyloom" aria-label="Telegram" className="hover:text-gray-800 transition-colors">
                   <MessageCircle className="h-5 w-5" />
+                </a>
+                <a href="#" aria-label="LinkedIn" className="hover:text-gray-800 transition-colors">
+                  <Linkedin className="h-5 w-5" />
                 </a>
                 <a href="#" aria-label="Twitter" className="hover:text-gray-800 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
