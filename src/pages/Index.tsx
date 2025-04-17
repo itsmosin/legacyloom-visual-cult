@@ -1,6 +1,7 @@
+
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion, useScroll } from "framer-motion"
-import { ArrowRight, ChevronRight, Sparkles, Telegram } from "lucide-react"
+import { ArrowRight, ChevronRight, MessageCircle, Sparkles } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from "react"
 
@@ -177,8 +178,8 @@ const Index = () => {
               </div>
               <p className="text-gray-500 text-sm mb-6">Crafting brand narratives that cultivate cult-like devotion.</p>
               <div className="flex gap-4 text-gray-400">
-                <a href="#" aria-label="Telegram" className="hover:text-gray-800 transition-colors">
-                  <Telegram className="h-5 w-5" />
+                <a href="https://t.me/legacyloom" aria-label="Telegram" className="hover:text-gray-800 transition-colors">
+                  <MessageCircle className="h-5 w-5" />
                 </a>
                 <a href="#" aria-label="Twitter" className="hover:text-gray-800 transition-colors">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
