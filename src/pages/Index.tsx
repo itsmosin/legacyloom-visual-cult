@@ -3,6 +3,7 @@ import { motion, useScroll } from "framer-motion"
 import { ArrowRight, ChevronRight, MessageCircle, Sparkles, Linkedin, Star, Palette, Zap, Target, Users, Trophy, Lightbulb } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from "react"
+import legacyLoomLogo from "@/assets/legacyloom-logo.png"
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -47,9 +48,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3"
           >
-            <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary animate-glow">
-              <Sparkles className="h-4 w-4 text-primary-foreground" />
-            </div>
+            <img src={legacyLoomLogo} alt="LegacyLoom" className="w-10 h-10 object-contain" />
             <h1 className="font-playfair text-2xl font-bold tracking-tight text-foreground">LegacyLoom</h1>
           </motion.div>
 
@@ -108,7 +107,7 @@ const Index = () => {
                 variants={fadeInUp}
                 className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
               >
-                We craft narratives that transcend traditional marketing, creating deep emotional connections that turn customers into devoted brand advocates.
+                We help brands tell stories that people actually remember and care about.
               </motion.p>
             </div>
 
@@ -124,12 +123,14 @@ const Index = () => {
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </ButtonGradient>
               <motion.a 
-                href="#what-we-craft" 
+                href="https://docsend.com/v/zqsgv/legacyloom-casestudies"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group flex items-center gap-2 px-8 py-4 transition-all border-2 border-transparent hover:border-border rounded-full hover:bg-muted/50 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <span className="text-muted-foreground group-hover:text-foreground transition-colors">Explore Services</span>
+                <span className="text-muted-foreground group-hover:text-foreground transition-colors">Case Studies</span>
                 <ArrowRight className="h-4 w-4 text-muted-foreground group-hover:text-foreground transition-all group-hover:translate-x-2" />
               </motion.a>
             </motion.div>
@@ -180,23 +181,23 @@ const Index = () => {
                 {[
                   { 
                     icon: Palette, 
-                    title: "Brand Architecture", 
-                    desc: "Structural foundation that defines your brand's core identity and values" 
+                    title: "Brand Strategy", 
+                    desc: "Build a brand that stands for something people actually believe in" 
                   },
                   { 
                     icon: Zap, 
-                    title: "Narrative Power", 
-                    desc: "Compelling stories that resonate deeply with your audience's emotions" 
+                    title: "Content Creation", 
+                    desc: "Create content that gets shared, saved, and remembered" 
                   },
                   { 
                     icon: Target, 
-                    title: "Strategic Positioning", 
-                    desc: "Precise market placement that distinguishes you from competitors" 
+                    title: "Growth Marketing", 
+                    desc: "Marketing that actually drives results, not just vanity metrics" 
                   },
                   { 
                     icon: Users, 
-                    title: "Community Building", 
-                    desc: "Cultivating devoted brand advocates who become your ambassadors" 
+                    title: "Community Growth", 
+                    desc: "Turn customers into fans who can't stop talking about you" 
                   }
                 ].map((pillar, index) => (
                   <motion.div
@@ -326,14 +327,12 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-primary">
-                  <Sparkles className="h-4 w-4 text-primary-foreground" />
-                </div>
+                <img src={legacyLoomLogo} alt="LegacyLoom" className="w-8 h-8 object-contain" />
                 <h3 className="font-playfair text-xl font-bold text-foreground">LegacyLoom</h3>
               </div>
               <p className="text-muted-foreground text-sm mb-8 leading-relaxed">Crafting brand narratives that cultivate cult-like devotion.</p>
               <div className="flex gap-6 text-muted-foreground">
-                <a href="https://t.me/legacyloom" aria-label="Telegram" className="hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full">
+                <a href="https://wa.me/918446603369" aria-label="WhatsApp" className="hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full">
                   <MessageCircle className="h-5 w-5" />
                 </a>
                 <a href="#" aria-label="LinkedIn" className="hover:text-primary transition-colors p-2 hover:bg-primary/10 rounded-full">
@@ -349,8 +348,7 @@ const Index = () => {
             <div className="flex flex-col">
               <h4 className="font-semibold text-foreground mb-6">Contact</h4>
               <p className="text-muted-foreground text-sm mb-6 leading-relaxed">Ready to start your brand legacy?</p>
-              <a href="mailto:hello@legacyloom.co" className="text-foreground font-medium hover:text-primary transition-colors block mb-3">hello@legacyloom.co</a>
-              <a href="https://t.me/legacyloom" className="text-foreground font-medium hover:text-primary transition-colors">@legacyloom</a>
+              <a href="mailto:mosin@legacyloom.co" className="text-foreground font-medium hover:text-primary transition-colors block mb-3">mosin@legacyloom.co</a>
             </div>
           </div>
           <Separator className="my-10 bg-border" />
