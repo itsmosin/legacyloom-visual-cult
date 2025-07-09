@@ -1,7 +1,6 @@
-
 import { ButtonGradient } from "@/components/ui/button-gradient"
 import { motion, useScroll } from "framer-motion"
-import { ArrowRight, ChevronRight, MessageCircle, Sparkles, Linkedin, Star } from "lucide-react"
+import { ArrowRight, ChevronRight, MessageCircle, Sparkles, Linkedin, Star, Palette, Zap, Target, Users, Trophy, Lightbulb } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from "react"
 
@@ -125,7 +124,7 @@ const Index = () => {
                 <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
               </ButtonGradient>
               <motion.a 
-                href="#why-legacyloom" 
+                href="#what-we-craft" 
                 className="group flex items-center gap-2 px-8 py-4 transition-all border-2 border-transparent hover:border-border rounded-full hover:bg-muted/50 hover:shadow-lg"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -138,71 +137,157 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="why-legacyloom" className="py-24 relative overflow-hidden bg-muted/30">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5"></div>
+      <section id="what-we-craft" className="py-32 relative overflow-hidden bg-gradient-to-br from-muted/30 via-background to-primary/5">
+        <div className="absolute inset-0">
+          <div className="absolute left-10 top-20 w-2 h-40 bg-gradient-to-b from-primary/20 to-transparent opacity-30"></div>
+          <div className="absolute right-10 bottom-20 w-2 h-40 bg-gradient-to-t from-primary/20 to-transparent opacity-30"></div>
+          <div className="absolute left-1/4 top-1/2 w-1 h-24 bg-gradient-to-b from-primary/15 to-transparent opacity-20 transform -translate-y-1/2"></div>
+          <div className="absolute right-1/4 top-1/3 w-1 h-32 bg-gradient-to-b from-primary/15 to-transparent opacity-20"></div>
+        </div>
+
         <div className="container mx-auto px-6 relative">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-6 text-foreground">Why LegacyLoom?</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">We craft narratives that transcend traditional marketing, creating deep emotional connections that turn customers into devoted brand advocates.</p>
+            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-foreground">
+              What We <span className="text-primary">Craft</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Like the ancient Greeks who built monuments to last millennia, we create brand legacies that endure and inspire devotion across generations.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-            {[
-              {
-                logo: "/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png",
-                alt: "MTV",
-                quote: "LegacyLoom transformed our digital presence completely. Their strategic approach to storytelling helped us connect with our audience on a deeper level, resulting in 300% increased engagement.",
-                name: "Sarah Chen",
-                title: "Marketing Director, MTV",
-                rating: 5
-              },
-              {
-                logo: "/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png",
-                alt: "Userology",
-                quote: "The brand narrative they created for us resonated perfectly with our target audience. Our engagement metrics have never been better, and we've seen a 250% increase in qualified leads.",
-                name: "Michael Roberts",
-                title: "CEO, Userology",
-                rating: 5
-              },
-              {
-                logo: "/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png",
-                alt: "SayF",
-                quote: "Working with LegacyLoom was transformative. They didn't just improve our marketing—they revolutionized how we connect with our community, leading to 400% growth in brand loyalty.",
-                name: "Emma Thompson",
-                title: "Brand Director, SayF",
-                rating: 5
-              }
-            ].map((testimonial, index) => (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="text-center lg:text-left">
+                <h3 className="font-playfair text-3xl font-bold mb-4 text-foreground">The Pillars of Excellence</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our foundation rests on timeless principles, much like the enduring columns of ancient temples.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {[
+                  { 
+                    icon: Palette, 
+                    title: "Brand Architecture", 
+                    desc: "Structural foundation that defines your brand's core identity and values" 
+                  },
+                  { 
+                    icon: Zap, 
+                    title: "Narrative Power", 
+                    desc: "Compelling stories that resonate deeply with your audience's emotions" 
+                  },
+                  { 
+                    icon: Target, 
+                    title: "Strategic Positioning", 
+                    desc: "Precise market placement that distinguishes you from competitors" 
+                  },
+                  { 
+                    icon: Users, 
+                    title: "Community Building", 
+                    desc: "Cultivating devoted brand advocates who become your ambassadors" 
+                  }
+                ].map((pillar, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="group p-6 rounded-2xl bg-card border border-border/50 hover:border-primary/30 hover:shadow-lg transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                        <pillar.icon className="h-6 w-6 text-primary" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-foreground mb-2">{pillar.title}</h4>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{pillar.desc}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="text-center lg:text-left mb-8">
+                <h3 className="font-playfair text-3xl font-bold mb-4 text-foreground">Monument to Success</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Every brand we touch becomes a lasting legacy, inspiring awe and commanding respect in their domain.
+                </p>
+              </div>
+
+              <div className="relative bg-gradient-to-br from-card to-muted/30 rounded-3xl p-8 border border-border/50 shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent rounded-3xl"></div>
+                
+                <div className="relative space-y-6">
+                  <div className="flex justify-center">
+                    <div className="w-40 h-8 bg-gradient-to-r from-primary/20 via-primary/30 to-primary/20 rounded-t-full relative">
+                      <div className="absolute top-2 left-1/2 transform -translate-x-1/2">
+                        <Trophy className="h-4 w-4 text-primary" />
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-3 gap-4">
+                    {[
+                      { metric: "400%", label: "Brand Loyalty Increase" },
+                      { metric: "300%", label: "Engagement Growth" },
+                      { metric: "250%", label: "Lead Generation" }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="text-center"
+                      >
+                        <div className="w-full h-24 bg-gradient-to-b from-primary/20 to-primary/10 rounded-lg mb-3 flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-primary mb-1">{stat.metric}</div>
+                            <Lightbulb className="h-4 w-4 text-primary/70 mx-auto" />
+                          </div>
+                        </div>
+                        <p className="text-xs text-muted-foreground font-medium">{stat.label}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+                  
+                  <div className="w-full h-4 bg-gradient-to-r from-primary/10 via-primary/20 to-primary/10 rounded-lg"></div>
+                </div>
+              </div>
+
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-border/50 hover:border-primary/20 group"
-                whileHover={{ y: -5 }}
-              >
-                <div className="mb-6">
-                  <img src={testimonial.logo} alt={testimonial.alt} className="h-10 w-auto opacity-70 group-hover:opacity-100 transition-opacity" />
-                </div>
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 fill-primary text-primary" />
-                  ))}
-                </div>
-                <p className="text-muted-foreground mb-6 leading-relaxed italic">"{testimonial.quote}"</p>
-                <div>
-                  <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                  <p className="text-muted-foreground text-sm">{testimonial.title}</p>
-                </div>
-              </motion.div>
-            ))}
+                className="absolute -top-4 -right-4 w-8 h-8 bg-primary/20 rounded-full blur-sm"
+                animate={{ y: [-10, 10, -10] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <motion.div
+                className="absolute -bottom-4 -left-4 w-6 h-6 bg-accent/20 rounded-full blur-sm"
+                animate={{ y: [10, -10, 10] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              />
+            </motion.div>
           </div>
         </div>
       </section>
