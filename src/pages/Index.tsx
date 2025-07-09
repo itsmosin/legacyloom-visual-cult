@@ -48,8 +48,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3"
           >
-            <img src={legacyLoomLogo} alt="LegacyLoom" className="w-10 h-10 object-contain" />
-            <h1 className="font-playfair text-2xl font-bold tracking-tight text-foreground">LegacyLoom</h1>
+            <img src="/lovable-uploads/a4da1803-1de4-481a-a936-0ac352cc91b6.png" alt="LegacyLoom" className="h-8 sm:h-10 object-contain" />
           </motion.div>
 
           <motion.div
@@ -79,42 +78,42 @@ const Index = () => {
             animate="animate"
             className="max-w-4xl mx-auto"
           >
-            <div className="text-center space-y-6 mb-16">
-              <motion.div variants={fadeInUp} className="space-y-2">
-                <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-                  Your Brand Deserves
-                </h2>
-                <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-                  More Than Engagement
-                </h2>
-                <div className="relative">
-                  <h2 className="font-playfair text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                    It Deserves{" "}
-                    <span className="relative inline-block text-primary">
-                      Cult
-                      <motion.div 
-                        className="absolute -bottom-2 left-0 w-full h-1 bg-primary/30 rounded-full"
-                        initial={{ scaleX: 0 }}
-                        animate={{ scaleX: 1 }}
-                        transition={{ duration: 1, delay: 1.5 }}
-                      />
-                    </span>
+              <div className="text-center space-y-6 mb-16">
+                <motion.div variants={fadeInUp} className="space-y-2">
+                  <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-foreground">
+                    Your Brand Deserves
                   </h2>
-                </div>
-              </motion.div>
+                  <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-foreground">
+                    More Than Engagement
+                  </h2>
+                  <div className="relative">
+                    <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                      It Deserves{" "}
+                      <span className="relative inline-block text-primary">
+                        Cult
+                        <motion.div 
+                          className="absolute -bottom-2 left-0 w-full h-1 bg-primary/30 rounded-full"
+                          initial={{ scaleX: 0 }}
+                          animate={{ scaleX: 1 }}
+                          transition={{ duration: 1, delay: 1.5 }}
+                        />
+                      </span>
+                    </h2>
+                  </div>
+                </motion.div>
 
-              <motion.p 
-                variants={fadeInUp}
-                className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
-              >
+                <motion.p 
+                  variants={fadeInUp}
+                  className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4"
+                >
                 We help brands tell stories that people actually remember and care about.
               </motion.p>
             </div>
 
-            <motion.div 
-              variants={fadeInUp}
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-            >
+              <motion.div 
+                variants={fadeInUp}
+                className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
+              >
               <ButtonGradient 
                 size="lg" 
                 className="w-full sm:w-auto group shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500"
@@ -154,10 +153,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <h2 className="font-playfair text-5xl md:text-6xl font-bold mb-6 text-foreground">
+            <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
               What We <span className="text-primary">Craft</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
               Like the ancient Greeks who built monuments to last millennia, we create brand legacies that endure and inspire devotion across generations.
             </p>
           </motion.div>
@@ -171,7 +170,7 @@ const Index = () => {
               className="space-y-8"
             >
               <div className="text-center lg:text-left">
-                <h3 className="font-playfair text-3xl font-bold mb-4 text-foreground">The Pillars of Excellence</h3>
+                <h3 className="font-playfair text-2xl sm:text-3xl font-bold mb-4 text-foreground">The Pillars of Excellence</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Our foundation rests on timeless principles, much like the enduring columns of ancient temples.
                 </p>
@@ -231,7 +230,7 @@ const Index = () => {
               className="relative"
             >
               <div className="text-center lg:text-left mb-8">
-                <h3 className="font-playfair text-3xl font-bold mb-4 text-foreground">Monument to Success</h3>
+                <h3 className="font-playfair text-2xl sm:text-3xl font-bold mb-4 text-foreground">Monument to Success</h3>
                 <p className="text-muted-foreground leading-relaxed">
                   Every brand we touch becomes a lasting legacy, inspiring awe and commanding respect in their domain.
                 </p>
@@ -303,7 +302,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="max-w-3xl mx-auto text-center"
           >
-            <h2 className="font-playfair text-4xl md:text-5xl font-bold mb-10 text-foreground">Let's Make Something Worth Remembering.</h2>
+            <h2 className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-10 text-foreground px-4">Let's Make Something Worth Remembering.</h2>
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
@@ -327,8 +326,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col">
               <div className="flex items-center gap-3 mb-6">
-                <img src={legacyLoomLogo} alt="LegacyLoom" className="w-8 h-8 object-contain" />
-                <h3 className="font-playfair text-xl font-bold text-foreground">LegacyLoom</h3>
+                <img src="/lovable-uploads/a4da1803-1de4-481a-a936-0ac352cc91b6.png" alt="LegacyLoom" className="h-6 object-contain" />
               </div>
               <p className="text-muted-foreground text-sm mb-8 leading-relaxed">Crafting brand narratives that cultivate cult-like devotion.</p>
               <div className="flex gap-6 text-muted-foreground">
