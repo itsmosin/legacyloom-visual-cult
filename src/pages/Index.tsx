@@ -3,7 +3,7 @@ import { motion, useScroll } from "framer-motion"
 import { ArrowRight, ChevronRight, MessageCircle, Sparkles, Linkedin, Star, Palette, Zap, Target, Users, Trophy, Lightbulb } from "lucide-react"
 import { Separator } from "@/components/ui/separator"
 import { useEffect, useState } from "react"
-import legacyLoomLogo from "@/assets/legacyloom-logo.png"
+import BrandLogos from "@/components/BrandLogos"
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -48,7 +48,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3"
           >
-            <img src="/lovable-uploads/a4da1803-1de4-481a-a936-0ac352cc91b6.png" alt="LegacyLoom" className="h-8 sm:h-10 object-contain" />
+            <span className="text-xl sm:text-2xl font-bold text-foreground">LegacyLoom</span>
           </motion.div>
 
           <motion.div
@@ -56,12 +56,14 @@ const Index = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <ButtonGradient 
-              variant="outline" 
-              size="sm"
-            >
-              Contact
-            </ButtonGradient>
+            <a href="https://calendly.com/itsmosin/15-minute-meeting" target="_blank" rel="noopener noreferrer">
+              <ButtonGradient 
+                variant="outline" 
+                size="sm"
+              >
+                Contact
+              </ButtonGradient>
+            </a>
           </motion.div>
         </div>
       </motion.nav>
@@ -114,13 +116,15 @@ const Index = () => {
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-4"
               >
-              <ButtonGradient 
-                size="lg" 
-                className="w-full sm:w-auto group shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500"
-              >
-                Book a Strategy Call
-                <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </ButtonGradient>
+              <a href="https://calendly.com/itsmosin/15-minute-meeting" target="_blank" rel="noopener noreferrer">
+                <ButtonGradient 
+                  size="lg" 
+                  className="w-full sm:w-auto group shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500"
+                >
+                  Book a Strategy Call
+                  <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </ButtonGradient>
+              </a>
               <motion.a 
                 href="https://docsend.com/v/zqsgv/legacyloom-casestudies"
                 target="_blank"
@@ -134,6 +138,59 @@ const Index = () => {
               </motion.a>
             </motion.div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Brands We Worked With Section */}
+      <section className="py-16 bg-muted/30 border-y border-border/50 overflow-hidden">
+        <div className="container mx-auto px-6">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h3 className="text-sm uppercase tracking-wider text-muted-foreground font-medium mb-4">
+              Brands We Worked With
+            </h3>
+          </motion.div>
+          
+          {/* Moving strip of logos */}
+          <div className="relative">
+            <motion.div
+              className="flex space-x-16 items-center"
+              animate={{ x: [0, -1920] }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 20,
+                  ease: "linear",
+                },
+              }}
+            >
+              {/* First set of logos */}
+              <div className="flex space-x-16 items-center min-w-fit">
+                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+              </div>
+              
+              {/* Duplicate set for seamless loop */}
+              <div className="flex space-x-16 items-center min-w-fit">
+                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -309,13 +366,15 @@ const Index = () => {
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <ButtonGradient 
-                size="lg"
-                className="shadow-2xl shadow-primary/20 hover:shadow-3xl hover:shadow-primary/30 transition-all duration-500 animate-glow"
-              >
-                Start Your Legacy
-                <ArrowRight className="h-5 w-5 ml-1" />
-              </ButtonGradient>
+              <a href="https://calendly.com/itsmosin/15-minute-meeting" target="_blank" rel="noopener noreferrer">
+                <ButtonGradient 
+                  size="lg"
+                  className="shadow-2xl shadow-primary/20 hover:shadow-3xl hover:shadow-primary/30 transition-all duration-500 animate-glow"
+                >
+                  Start Your Legacy
+                  <ArrowRight className="h-5 w-5 ml-1" />
+                </ButtonGradient>
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -326,7 +385,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col">
               <div className="flex items-center gap-3 mb-6">
-                <img src="/lovable-uploads/a4da1803-1de4-481a-a936-0ac352cc91b6.png" alt="LegacyLoom" className="h-6 object-contain" />
+                <span className="text-lg font-bold text-foreground">LegacyLoom</span>
               </div>
               <p className="text-muted-foreground text-sm mb-8 leading-relaxed">Crafting brand narratives that cultivate cult-like devotion.</p>
               <div className="flex gap-6 text-muted-foreground">
