@@ -48,7 +48,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3"
           >
-            <span className="text-xl sm:text-2xl font-bold text-foreground">LegacyLoom</span>
+            <span className="text-xl sm:text-2xl font-brand font-semibold brand-text">LegacyLoom</span>
           </motion.div>
 
           <motion.div
@@ -60,6 +60,7 @@ const Index = () => {
               <ButtonGradient 
                 variant="outline" 
                 size="sm"
+                className="button-hover-lift"
               >
                 Contact
               </ButtonGradient>
@@ -70,8 +71,8 @@ const Index = () => {
 
       <section className="relative min-h-screen flex items-center pt-32 pb-24 md:pt-24 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-muted/20"></div>
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-float" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-gentle-float"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-gentle-float" style={{animationDelay: '2s'}}></div>
         
         <div className="container mx-auto px-6 relative">
           <motion.div 
@@ -119,7 +120,7 @@ const Index = () => {
               <a href="https://calendly.com/itsmosin/15-minute-meeting" target="_blank" rel="noopener noreferrer">
                 <ButtonGradient 
                   size="lg" 
-                  className="w-full sm:w-auto group shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500"
+                  className="w-full sm:w-auto group button-hover-lift shadow-xl shadow-primary/20 hover:shadow-2xl hover:shadow-primary/30 transition-all duration-500"
                 >
                   Book a Strategy Call
                   <ChevronRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
@@ -165,29 +166,29 @@ const Index = () => {
                 x: {
                   repeat: Infinity,
                   repeatType: "loop",
-                  duration: 20,
+                  duration: 30,
                   ease: "linear",
                 },
               }}
             >
               {/* First set of logos */}
               <div className="flex space-x-16 items-center min-w-fit">
-                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
               </div>
               
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-16 items-center min-w-fit">
-                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
-                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-opacity" />
+                <img src="/lovable-uploads/8edf337d-0006-40ad-ab3d-e12bcfb1da68.png" alt="MTV" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/8c90bbb0-2170-45e6-9a98-a394e09dc4fe.png" alt="111PG" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/074abf38-69a2-415b-b882-a25faac38dba.png" alt="Userology" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/227e1629-b5ad-4e1b-b1c6-940645d288a8.png" alt="SayF" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/02b4f325-7529-4a53-82dd-8f432af9a6b1.png" alt="Securr" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
+                <img src="/lovable-uploads/0db71c67-a3aa-4a02-a57f-d37570bf719d.png" alt="D" className="h-8 w-auto opacity-60 hover:opacity-100 transition-all duration-300 filter grayscale hover:grayscale-0" />
               </div>
             </motion.div>
           </div>
@@ -369,7 +370,7 @@ const Index = () => {
               <a href="https://calendly.com/itsmosin/15-minute-meeting" target="_blank" rel="noopener noreferrer">
                 <ButtonGradient 
                   size="lg"
-                  className="shadow-2xl shadow-primary/20 hover:shadow-3xl hover:shadow-primary/30 transition-all duration-500 animate-glow"
+                  className="button-hover-lift shadow-2xl shadow-primary/20 hover:shadow-3xl hover:shadow-primary/30 transition-all duration-500 animate-glow"
                 >
                   Start Your Legacy
                   <ArrowRight className="h-5 w-5 ml-1" />
@@ -385,7 +386,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="flex flex-col">
               <div className="flex items-center gap-3 mb-6">
-                <span className="text-lg font-bold text-foreground">LegacyLoom</span>
+                <span className="text-lg font-brand font-semibold brand-text">LegacyLoom</span>
               </div>
               <p className="text-muted-foreground text-sm mb-8 leading-relaxed">Crafting brand narratives that cultivate cult-like devotion.</p>
               <div className="flex gap-6 text-muted-foreground">
