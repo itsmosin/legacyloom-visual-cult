@@ -72,17 +72,23 @@ const Index = () => {
       <section className="relative min-h-screen flex items-center pt-32 pb-24 md:pt-24 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-muted/20"></div>
         
-        {/* Creative Floating Elements */}
-        <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-gentle-float"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-gentle-float" style={{animationDelay: '2s'}}></div>
+        {/* Beautiful Cloud-like Background */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-blue-200/30 to-purple-200/20 rounded-full blur-2xl animate-gentle-float"></div>
+          <div className="absolute top-40 right-32 w-40 h-40 bg-gradient-to-br from-pink-200/25 to-orange-200/15 rounded-full blur-3xl animate-gentle-float" style={{animationDelay: '1s'}}></div>
+          <div className="absolute bottom-32 left-32 w-36 h-36 bg-gradient-to-br from-cyan-200/20 to-teal-200/15 rounded-full blur-2xl animate-gentle-float" style={{animationDelay: '3s'}}></div>
+          <div className="absolute bottom-20 right-20 w-28 h-28 bg-gradient-to-br from-yellow-200/25 to-amber-200/20 rounded-full blur-xl animate-gentle-float" style={{animationDelay: '2s'}}></div>
+        </div>
         
-        {/* Floating Legacy Elements */}
+        {/* Floating Memory Elements */}
+        {/* Vintage Camera */}
         <motion.div
-          className="absolute top-20 left-16 w-16 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-lg"
+          className="absolute top-24 left-16 w-16 h-12 bg-gradient-to-br from-slate-400/40 to-slate-600/30 rounded-lg shadow-2xl border border-white/20"
           animate={{ 
-            y: [-20, 20, -20],
-            rotateY: [0, 10, 0],
-            rotateX: [0, 5, 0]
+            y: [-25, 25, -25],
+            rotateY: [0, 15, 0],
+            rotateX: [0, 10, 0],
+            rotateZ: [0, 5, 0]
           }}
           transition={{ 
             duration: 8, 
@@ -90,17 +96,105 @@ const Index = () => {
             ease: "easeInOut" 
           }}
         >
-          <div className="w-full h-full bg-gradient-to-br from-white/30 to-transparent rounded-lg flex items-center justify-center">
-            <div className="text-primary/60 text-xs font-bold">STORY</div>
+          <div className="w-full h-full bg-gradient-to-br from-white/30 to-transparent rounded-lg relative">
+            <div className="absolute top-1 left-1 w-3 h-3 bg-slate-700/50 rounded-full"></div>
+            <div className="absolute top-2 right-1 w-2 h-1 bg-red-400/60 rounded-sm"></div>
+            <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 w-6 h-2 bg-slate-600/40 rounded-full"></div>
           </div>
         </motion.div>
 
+        {/* Photo Frame */}
         <motion.div
-          className="absolute top-1/3 right-20 w-14 h-10 bg-gradient-to-br from-accent/25 to-accent/15 rounded-md shadow-lg"
+          className="absolute top-1/3 right-20 w-14 h-18 bg-gradient-to-br from-amber-300/30 to-amber-600/20 rounded-sm shadow-xl border-2 border-amber-400/30"
           animate={{ 
-            y: [20, -20, 20],
-            rotateY: [0, -15, 0],
-            rotateZ: [0, 5, 0]
+            y: [20, -30, 20],
+            rotateY: [0, -20, 0],
+            rotateZ: [0, 8, 0]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1.5
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/40 to-transparent rounded-sm p-1">
+            <div className="w-full h-full bg-gradient-to-br from-sky-200/60 to-emerald-200/40 rounded-sm"></div>
+          </div>
+        </motion.div>
+
+        {/* Film Strip */}
+        <motion.div
+          className="absolute bottom-1/3 left-1/4 w-20 h-6 bg-gradient-to-r from-slate-800/40 to-slate-700/30 rounded-sm shadow-lg"
+          animate={{ 
+            y: [-20, 20, -20],
+            rotateY: [0, 25, 0],
+            rotateZ: [0, -10, 0]
+          }}
+          transition={{ 
+            duration: 12, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2.5
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-r from-white/20 to-transparent rounded-sm flex items-center justify-between px-1">
+            <div className="w-1 h-3 bg-slate-900/30 rounded-sm"></div>
+            <div className="w-1 h-3 bg-slate-900/30 rounded-sm"></div>
+            <div className="w-1 h-3 bg-slate-900/30 rounded-sm"></div>
+            <div className="w-1 h-3 bg-slate-900/30 rounded-sm"></div>
+          </div>
+        </motion.div>
+
+        {/* Heart Memory */}
+        <motion.div
+          className="absolute top-2/3 right-1/4 w-12 h-12 bg-gradient-to-br from-rose-400/40 to-pink-500/30 rounded-full shadow-xl"
+          animate={{ 
+            y: [30, -20, 30],
+            scale: [1, 1.2, 1],
+            rotateZ: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 15, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 3.5
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/30 to-transparent rounded-full flex items-center justify-center">
+            <div className="text-rose-300/80 text-lg">♥</div>
+          </div>
+        </motion.div>
+
+        {/* Book/Story */}
+        <motion.div
+          className="absolute bottom-20 right-16 w-12 h-16 bg-gradient-to-br from-emerald-400/35 to-emerald-600/25 rounded-md shadow-xl border border-emerald-300/20"
+          animate={{ 
+            y: [-15, 35, -15],
+            rotateY: [0, 30, 0],
+            rotateX: [0, -15, 0]
+          }}
+          transition={{ 
+            duration: 9, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 4.5
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/25 to-transparent rounded-md relative">
+            <div className="absolute top-1 left-1 right-1 h-0.5 bg-emerald-600/30 rounded"></div>
+            <div className="absolute top-3 left-1 right-1 h-0.5 bg-emerald-600/20 rounded"></div>
+            <div className="absolute top-5 left-1 right-1 h-0.5 bg-emerald-600/20 rounded"></div>
+          </div>
+        </motion.div>
+
+        {/* Sparkle/Star */}
+        <motion.div
+          className="absolute top-40 left-1/3 w-8 h-8 bg-gradient-to-br from-yellow-400/50 to-orange-400/40 rounded-full shadow-lg"
+          animate={{ 
+            y: [-10, 25, -10],
+            scale: [1, 1.3, 1],
+            rotateZ: [0, 90, 180, 270, 360]
           }}
           transition={{ 
             duration: 6, 
@@ -109,62 +203,51 @@ const Index = () => {
             delay: 1
           }}
         >
-          <div className="w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-md border border-white/10"></div>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/20 rounded-full shadow-lg"
-          animate={{ 
-            y: [-15, 15, -15],
-            scale: [1, 1.1, 1],
-            rotateZ: [0, 180, 360]
-          }}
-          transition={{ 
-            duration: 10, 
-            repeat: Infinity, 
-            ease: "easeInOut",
-            delay: 2
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-full flex items-center justify-center">
-            <div className="w-3 h-3 bg-primary/40 rounded-full"></div>
+          <div className="w-full h-full bg-gradient-to-br from-white/40 to-transparent rounded-full flex items-center justify-center">
+            <div className="text-yellow-200/90 text-sm">✦</div>
           </div>
         </motion.div>
 
+        {/* Memory Card */}
         <motion.div
-          className="absolute top-2/3 right-1/3 w-18 h-12 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl shadow-lg"
+          className="absolute bottom-40 left-20 w-10 h-14 bg-gradient-to-br from-indigo-400/30 to-purple-500/25 rounded-lg shadow-xl border border-indigo-300/20"
           animate={{ 
-            y: [25, -25, 25],
+            y: [25, -15, 25],
+            rotateY: [0, -25, 0],
+            rotateZ: [0, 12, 0]
+          }}
+          transition={{ 
+            duration: 11, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 5
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-lg relative">
+            <div className="absolute top-1 left-1 right-1 h-2 bg-indigo-500/30 rounded-sm"></div>
+            <div className="absolute bottom-1 left-1 right-1 h-4 bg-indigo-400/20 rounded-sm"></div>
+          </div>
+        </motion.div>
+
+        {/* Floating Quote Bubble */}
+        <motion.div
+          className="absolute top-1/2 left-12 w-16 h-12 bg-gradient-to-br from-cyan-300/35 to-blue-400/25 rounded-2xl shadow-lg"
+          animate={{ 
+            y: [-20, 30, -20],
             rotateY: [0, 20, 0],
-            rotateX: [0, -10, 0]
+            scale: [1, 1.1, 1]
           }}
           transition={{ 
-            duration: 7, 
+            duration: 13, 
             repeat: Infinity, 
             ease: "easeInOut",
-            delay: 3
+            delay: 6
           }}
         >
-          <div className="w-full h-full bg-gradient-to-br from-white/15 to-transparent rounded-xl flex items-center justify-center">
-            <div className="text-muted-foreground/60 text-xs">♡</div>
+          <div className="w-full h-full bg-gradient-to-br from-white/25 to-transparent rounded-2xl flex items-center justify-center relative">
+            <div className="text-cyan-200/80 text-lg">"</div>
+            <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-gradient-to-br from-cyan-300/35 to-blue-400/25 rounded-full transform rotate-45"></div>
           </div>
-        </motion.div>
-
-        <motion.div
-          className="absolute bottom-20 right-16 w-10 h-14 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg shadow-lg"
-          animate={{ 
-            y: [-10, 30, -10],
-            rotateZ: [0, -10, 0],
-            scale: [1, 0.9, 1]
-          }}
-          transition={{ 
-            duration: 9, 
-            repeat: Infinity, 
-            ease: "easeInOut",
-            delay: 4
-          }}
-        >
-          <div className="w-full h-full bg-gradient-to-br from-white/25 to-transparent rounded-lg"></div>
         </motion.div>
         
         <div className="container mx-auto px-6 relative">
