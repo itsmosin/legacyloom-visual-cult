@@ -71,8 +71,101 @@ const Index = () => {
 
       <section className="relative min-h-screen flex items-center pt-32 pb-24 md:pt-24 md:pb-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-muted/20"></div>
+        
+        {/* Creative Floating Elements */}
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-gentle-float"></div>
         <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-accent/10 rounded-full blur-2xl animate-gentle-float" style={{animationDelay: '2s'}}></div>
+        
+        {/* Floating Legacy Elements */}
+        <motion.div
+          className="absolute top-20 left-16 w-16 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg shadow-lg"
+          animate={{ 
+            y: [-20, 20, -20],
+            rotateY: [0, 10, 0],
+            rotateX: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 8, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/30 to-transparent rounded-lg flex items-center justify-center">
+            <div className="text-primary/60 text-xs font-bold">STORY</div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="absolute top-1/3 right-20 w-14 h-10 bg-gradient-to-br from-accent/25 to-accent/15 rounded-md shadow-lg"
+          animate={{ 
+            y: [20, -20, 20],
+            rotateY: [0, -15, 0],
+            rotateZ: [0, 5, 0]
+          }}
+          transition={{ 
+            duration: 6, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 1
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-md border border-white/10"></div>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-1/3 left-1/3 w-12 h-12 bg-gradient-to-br from-primary/30 to-primary/20 rounded-full shadow-lg"
+          animate={{ 
+            y: [-15, 15, -15],
+            scale: [1, 1.1, 1],
+            rotateZ: [0, 180, 360]
+          }}
+          transition={{ 
+            duration: 10, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 2
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/20 to-transparent rounded-full flex items-center justify-center">
+            <div className="w-3 h-3 bg-primary/40 rounded-full"></div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="absolute top-2/3 right-1/3 w-18 h-12 bg-gradient-to-br from-muted/40 to-muted/20 rounded-xl shadow-lg"
+          animate={{ 
+            y: [25, -25, 25],
+            rotateY: [0, 20, 0],
+            rotateX: [0, -10, 0]
+          }}
+          transition={{ 
+            duration: 7, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 3
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/15 to-transparent rounded-xl flex items-center justify-center">
+            <div className="text-muted-foreground/60 text-xs">♡</div>
+          </div>
+        </motion.div>
+
+        <motion.div
+          className="absolute bottom-20 right-16 w-10 h-14 bg-gradient-to-br from-accent/20 to-accent/10 rounded-lg shadow-lg"
+          animate={{ 
+            y: [-10, 30, -10],
+            rotateZ: [0, -10, 0],
+            scale: [1, 0.9, 1]
+          }}
+          transition={{ 
+            duration: 9, 
+            repeat: Infinity, 
+            ease: "easeInOut",
+            delay: 4
+          }}
+        >
+          <div className="w-full h-full bg-gradient-to-br from-white/25 to-transparent rounded-lg"></div>
+        </motion.div>
         
         <div className="container mx-auto px-6 relative">
           <motion.div 
